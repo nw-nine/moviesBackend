@@ -15,6 +15,16 @@ app.use("/movies", moviesRouter)
 app.use("/reviews", reviewsRouter)
 app.use("/theaters", theatersRouter)
 
+var Rollbar = require('rollbar')
+var rollbar = new Rollbar({
+  accessToken: 'cba69bc0bf69412e86f7086a27900477',
+  captureUncaught: true,
+  captureUnhandledRejections: true,
+})
+
+// record a generic message and send it to Rollbar
+rollbar.log('Hello world!')
+
 
 
 // Not found handler

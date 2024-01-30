@@ -24,7 +24,7 @@ async function update(req, res) {
         review_id: res.locals.review.review_id,
       };
       const data = await service.update(updatedReview);
-      console.log("!@#@#", data);
+    //   console.log("!@#@#", data);
     res.json({ data })
 }
 

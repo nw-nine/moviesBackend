@@ -16,9 +16,9 @@ async function movieExists(req, res, next) {
 async function list(req, res, next) {
     const { is_showing } = req.query
     if(is_showing) {
-        console.log("@#@#@");
+        // console.log("@#@#@");
         let data = await service.filteredList()
-        console.log("Data:", data);
+        // console.log("Data:", data);
         res.json({ data })
     }else {
         let data = await service.list()
@@ -29,7 +29,7 @@ async function list(req, res, next) {
 async function filteredList(req, res) {
     if(req.query) {
         let data = await service.filteredList()
-        console.log(data);
+        // console.log(data);
         res.json({ data })
     }
 }

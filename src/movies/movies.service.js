@@ -12,7 +12,7 @@ function filteredList() {
         .where({ "mt.is_showing": true });
         
 
-    console.log("@@@@@query", query.toString()); // Log the generated SQL query
+    // console.log("@@@@@query", query.toString()); // Log the generated SQL query
 
     return query;
 }
